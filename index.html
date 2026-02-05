@@ -1,69 +1,89 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <title>โรงเรียนขุขันธ์</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+</head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="header-top">
-            📞 โทร: 045-671249 | ✉️ kks@khukhan.ac.th
+            <i class="fa-solid fa-phone"></i> โทร: 045-671249 | <i class="fa-solid fa-envelope"></i> kks@khukhan.ac.th
         </div>
-        <div class="logo-section">
-            <div class="logo-circle">
-            <img src="1.jpg" alt="ตราโรงเรียน">
-        </div>
-                 <div class="school-name">
-         <h1>โรงเรียนขุขันธ์</h1>
-        <p>พัฒนาการศึกษา สร้างคนดีมีคุณภาพ</p>
-    </div>
-</div>
-    </header>
+        <div class="header-main">
+            <div class="logo-section">
+                <div class="logo-circle">
+                    <img src="assets/images/1.jpg" alt="ตราโรงเรียน">
+                </div>
+                <div class="school-name">
+                    <h1>โรงเรียนขุขันธ์</h1>
+                    <p>พัฒนาการศึกษา สร้างคนดีมีคุณภาพ</p>
+                </div>
+            </div>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.html">🏠 หน้าแรก</a></li>
-            <li><a href="about.html">ℹ️ ข้อมูลโรงเรียน</a></li>
-            <li><a href="news.html">📰 ข่าวและเอกสาร</a></li>
-            <li><a href="classroom.html">💻 ห้องเรียนออนไลน์</a></li>
-            <li><a href="from.html"> 📄แบบฟอร์มออนไลน์</a></li>
-            <li><a href="contact.html">📞 ติดต่อเรา</a></li>
-        </ul>
-    </nav>
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> หน้าแรก</a></li>
+                    <li><a href="pages/about.html"><i class="fa-solid fa-circle-info"></i> ข้อมูลโรงเรียน</a></li>
+                    <li><a href="pages/news.html"><i class="fa-solid fa-newspaper"></i> ข่าวและเอกสาร</a></li>
+                    <li><a href="pages/classroom.html"><i class="fa-solid fa-laptop"></i> ห้องเรียนออนไลน์</a></li>
+                    <li><a href="pages/from.html"> <i class="fa-solid fa-file-alt"></i> แบบฟอร์มออนไลน์</a></li>
+                    <li><a href="pages/contact.html"><i class="fa-solid fa-phone"></i> ติดต่อเรา</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="hero-bg"></div>
         <div class="hero-content">
-            <h2>ยินดีต้อนรับสู่โรงเรียนขุขันธ์</h2>
-            <p>ศูนย์กลางการเรียนรู้และพัฒนาศักยภาพนักเรียน</p>
-            <a href="classroom.html" class="btn">เข้าสู่ห้องเรียนออนไลน์</a>
+            <h2>โรงเรียนขุขันธ์</h2>
+            <p>Khukhan School</p>
+            <a href="pages/classroom.html" class="btn-hero"><i class="fa-solid fa-laptop"></i>
+                เข้าสู่ห้องเรียนออนไลน์</a>
         </div>
     </section>
 
     <!-- Quick Access -->
-    <section class="quick-access">
+    <section class="quick-access-section">
         <div class="container">
-            <h2 class="section-title">เมนูทางการค้นหา</h2>
+            <h2 class="section-title"><span>เมนู</span>บริการ</h2>
             <div class="quick-grid">
-                <div class="quick-card" onclick="location.href='classroom.html'">
-                    <div class="icon">💻</div>
+                <div class="quick-card" onclick="location.href='pages/classroom.html'">
+                    <div class="icon"><i class="fa-solid fa-laptop"></i></div>
                     <h3>ห้องเรียนออนไลน์</h3>
-                    <p>เข้าเรียนผ่านระบบออนไลน์</p>
+                    <!-- FIX FOR PERFECT CIRCLE - Already applied in components.css -->
+                    <p>ระบบการเรียนการสอนทางไกล</p>
                 </div>
-                
-                <div class="quick-card" onclick="location.href='timetable.html'">
-                    <div class="icon">📅</div>
+                <div class="quick-card" onclick="location.href='pages/timetable.html'">
+                    <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
                     <h3>ตารางเรียน</h3>
-                    <p>ดูตารางเรียนและกิจกรรม</p>
+                    <p>ตรวจสอบตารางเรียนประจำภาคเรียน</p>
                 </div>
-                <div class="quick-card" onclick="location.href='contact.html'">
-                    <div class="icon">📞</div>
+                <div class="quick-card" onclick="location.href='pages/news.html'">
+                    <div class="icon"><i class="fa-solid fa-newspaper"></i></div>
+                    <h3>ข่าวประชาสัมพันธ์</h3>
+                    <p>ติดตามข่าวสารและกิจกรรมล่าสุด</p>
+                </div>
+                <div class="quick-card" onclick="location.href='pages/contact.html'">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
                     <h3>ติดต่อเรา</h3>
-                    <p>ช่องทางติดต่อโรงเรียน</p>
+                    <p>ช่องทางการติดต่อและแผนที่</p>
                 </div>
             </div>
         </div>
@@ -72,36 +92,42 @@
     <!-- News Section -->
     <section class="news-section" id="news">
         <div class="container">
-            <h2 class="section-title">📰 ข่าวประกาศล่าสุด</h2>
+            <h2 class="section-title">ข่าว<span>ประกาศ</span>ล่าสุด</h2>
             <div class="news-grid">
+                <!-- News Item 1 -->
                 <div class="news-card">
-                    <div class="quick-card" onclick="location.href='http://sites.google.com/khukhan.ac.th/kksproject'"target="_blank">
-                    <div class="icon">📸</div>
+                    <div class="news-image">
+                        <img src="assets/images/imge3.jpg" alt="News Image">
                     </div>
                     <div class="news-content">
-                        <div class="news-date">รวมทุกปี</div>
-                        <h3>📸ภาพกิจกรรม</h3>
-                        <p>ภาพรวมกิจกรรม</p>
+                        <div class="news-date">10 ตุลาคม 2568</div>
+                        <h3>กิจกรรมวันสถาปนาโรงเรียน</h3>
+                        <p>ขอเชิญศิษย์เก่าและศิษย์ปัจจุบันร่วมงานวันสถาปนาโรงเรียนย้อนรำลึกความหลัง</p>
+                        <a href="pages/news.html" class="news-link">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-               <div class="news-card">
-                    <div class="quick-card" onclick="location.href='https://sites.google.com/site/kksvichakarn/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%9A%E0%B8%99%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%A2%E0%B8%99%E0%B9%83%E0%B8%AB%E0%B8%A1'"target="_blank">
-                    <div class="icon">🧑‍🎓</div>
-                </div>
-                    <div class="news-content">
-                        <div class="news-date">ปีการศึกษา 2569</div>
-                        <h3>🧑‍🎓 รับสม้ครนักเรียน</h3>
-                        <p>รับสม้ครนักเรียน</p>
-                    </div>
-                </div>
+                <!-- News Item 2 -->
                 <div class="news-card">
-                    <div class="quick-card" onclick="location.href=''"target="_blank">
-                    <div class="icon">🧑‍🎓</div>
-                </div>
+                    <div class="news-image">
+                        <img src="assets/images/imge2.jpg" alt=" News Image">
+                    </div>
                     <div class="news-content">
-                        <div class="news-date">รวมทุกปี</div>
-                        <h3>📘วิชาที่สอน</h3>
-                        <p>รับสม้ครนักเรียน</p>
+                        <div class="news-date">8 ตุลาคม 2568</div>
+                        <h3>การสอบกลางภาคเรียน</h3>
+                        <p>ประกาศตารางสอบกลางภาคเรียนที่ 2 ปีการศึกษา 2568 นักเรียนสามารถตรวจสอบตารางสอบได้ที่นี่</p>
+                        <a href="pages/news.html" class="news-link">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- News Item 3 -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="assets/images/imge1.jpg" alt="News Image">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">5 ตุลาคม 2568</div>
+                        <h3>โครงการทัศนศึกษา</h3>
+                        <p>เปิดรับสมัครนักเรียนเข้าร่วมโครงการทัศนศึกษา ณ พิพิธภัณฑ์วิทยาศาสตร์แห่งชาติ</p>
+                        <a href="pages/news.html" class="news-link">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -111,25 +137,25 @@
     <!-- About Section -->
     <section class="quick-access" id="about">
         <div class="container">
-            <h2 class="section-title">ℹ️ ข้อมูลโรงเรียน</h2>
+            <h2 class="section-title"><i class="fa-solid fa-circle-info"></i> ข้อมูลโรงเรียน</h2>
             <div class="quick-grid">
                 <div class="quick-card" onclick="location.href='http://khukhan.ac.th/2019/?page_id=45'">
-                    <div class="icon">📖</div>
+                    <div class="icon"><i class="fa-solid fa-book-open"></i></div>
                     <h3>ประวัติโรงเรียน</h3>
                     <p>ก่อตั้งเมื่อ พ.ศ. 2500</p>
                 </div>
-                <div class="quick-card" onclick="location.href='Vision.html'  ">
-                    <div class="icon">🎯</div>
+                <div class="quick-card" onclick="location.href='pages/Vision.html'  ">
+                    <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
                     <h3>วิสัยทัศน์</h3>
                     <p>เป็นองค์กรแห่งการเรียนรู้</p>
                 </div>
                 <div class="quick-card" onclick="location.href='http://khukhan.ac.th/2019/?page_id=68'">
-                    <div class="icon">👥</div>
+                    <div class="icon"><i class="fa-solid fa-users"></i></div>
                     <H3>ผู้บริหาร</H3>
                     <p>ทำเนียบผู้บริหารโรงเรียน</p>
                 </div>
-                <div class="quick-card" onclick="location.href='Faculty.html'">
-                    <div class="icon">👨‍🏫</div>
+                <div class="quick-card" onclick="location.href='pages/Faculty.html'">
+                    <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
                     <h3>คณะครู</h3>
                     <p>บุคลากรและครูผู้สอน</p>
                 </div>
@@ -142,21 +168,21 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>โรงเรียนขุขันธ์</h3>
-                <p>📍 60 หมู่ที่ 3 ถนนเจริญราษฏร์สมบัติ ตำบลห้วยเหนือ </p>
+                <p><i class="fa-solid fa-location-dot"></i> 60 หมู่ที่ 3 ถนนเจริญราษฏร์สมบัติ ตำบลห้วยเหนือ </p>
                 <p>อำเถอขุขันธ์ จังหวัดศรีสะเกษ 33140</p>
             </div>
             <div class="footer-section">
                 <h3>ติดต่อเรา</h3>
-                <p>📞 โทร: 045-671249</p>
-                <p>📠 แฟกซ์: 045-671479</p>
-                <p>✉️ Email: kks@khukhan.ac.th</p>
-                <a href="http://khukhan.ac.th/2019/">🌏 : khukhan.ac.th</a>
+                <p><i class="fa-solid fa-phone"></i> โทร: 045-671249</p>
+                <p><i class="fa-solid fa-fax"></i> แฟกซ์: 045-671479</p>
+                <p><i class="fa-solid fa-envelope"></i> Email: kks@khukhan.ac.th</p>
+                <a href="http://khukhan.ac.th/2019/"><i class="fa-solid fa-globe"></i> : khukhan.ac.th</a>
             </div>
             <div class="footer-section">
                 <h3>ลิงก์ด่วน</h3>
-                <a href="classroom.html">ห้องเรียนออนไลน์</a>
-                <a href="forms.html">แบบฟอร์มออนไลน์</a>
-                <a href="news.html">ข่าวประกาศ</a>
+                <a href="pages/classroom.html">ห้องเรียนออนไลน์</a>
+                <a href="pages/from.html">แบบฟอร์มออนไลน์</a>
+                <a href="pages/news.html">ข่าวประกาศ</a>
             </div>
             <div class="footer-section">
                 <h3>เวลาทำการ</h3>
@@ -169,5 +195,9 @@
             <p>&copy; โรงเรียนขุขันธ์ </p>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/menu.js"></script>
 </body>
+
 </html>

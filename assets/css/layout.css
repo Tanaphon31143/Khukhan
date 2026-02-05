@@ -1,0 +1,173 @@
+/* --- Header & Top Bar --- */
+header {
+    background: var(--secondary-color);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 8px 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.header-top i {
+    margin-right: 5px;
+}
+
+.header-top span {
+    margin: 0 10px;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.school-name h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.school-name p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* --- Navigation --- */
+nav ul {
+    display: flex;
+    gap: 5px;
+}
+
+nav a {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+nav a i {
+    margin-right: 6px;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Mobile Menu Button (Hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1a1a1a;
+    /* Black/Dark Grey background */
+    color: var(--secondary-color);
+    padding: 70px 0 0;
+    /* Removing bottom padding to let footer-bottom sit flush if needed, or keeping it */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+    padding: 0 5%;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-color);
+    /* Red accent */
+}
+
+.footer-section p {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+.footer-section a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    padding-left: 8px;
+    color: var(--primary-color);
+    /* Red hover */
+}
+
+.footer-section i {
+    width: 25px;
+    text-align: center;
+    margin-right: 10px;
+    color: var(--primary-color);
+    /* Red icons */
+}
+
+.footer-bottom {
+    background-color: #111111;
+    /* Darker Black for bottom bar */
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}

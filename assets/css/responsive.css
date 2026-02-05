@@ -1,0 +1,142 @@
+/* --- Mobile Responsive --- */
+@media (max-width: 900px) {
+    .header-main {
+        padding: 15px 20px;
+        position: relative;
+        flex-wrap: wrap;
+        /* Allow Nav to break to new line */
+        justify-content: space-between;
+        /* Push Logo and Toggle apart */
+        /* For absolute positioning of nav if needed, though flex column works */
+    }
+
+    .logo-section {
+        margin-bottom: 0;
+        width: auto;
+        justify-content: flex-start;
+        flex-grow: 0;
+        /* Don't take all space, allow toggle to exist */
+    }
+
+    .school-name {
+        text-align: left;
+    }
+
+    .school-name h1 {
+        font-size: 1.2rem;
+        /* Resize for mobile */
+    }
+
+    .school-name p {
+        font-size: 0.8rem;
+    }
+
+    /* Show Hamburger Menu */
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        /* Ensure it stays to the right if flex properties vary */
+        z-index: 1001;
+        /* Ensure it's reachable */
+    }
+
+    /* Navigation - Mobile State */
+    nav {
+        width: 100%;
+        flex-basis: 100%;
+        /* Force onto new line */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease, opacity 0.4s ease;
+        background-color: var(--secondary-color);
+        margin-top: 0;
+        /* Reset margin */
+        border-radius: 0 0 var(--radius) var(--radius);
+        opacity: 0;
+        /* Fade effect */
+    }
+
+    /* Active State (Changed via JS) */
+    nav.active {
+        max-height: 500px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        opacity: 1;
+        border-top: 1px solid #eee;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    nav a {
+        justify-content: flex-start;
+        /* Align text left */
+        width: 100%;
+        padding: 15px 20px;
+        background-color: transparent;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .header-top {
+        display: none;
+        /* Hide top bar on very small screens to save space */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        justify-content: center;
+        width: 100%;
+        background-color: #f5f5f5;
+        margin-bottom: 5px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+}
