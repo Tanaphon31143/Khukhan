@@ -93,6 +93,8 @@
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
 }
 
 .news-card:hover {
